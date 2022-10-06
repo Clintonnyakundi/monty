@@ -20,7 +20,7 @@ void pop(stack_t **stack, unsigned int line_num)
 	free(*stack);
 	*stack = temp;
 
-	if (!(*stack))
+	if (!*stack)
 		return;
 	(*stack)->prev = NULL;
 }

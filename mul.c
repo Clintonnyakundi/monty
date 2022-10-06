@@ -10,10 +10,11 @@ void mul(stack_t **stack, unsigned int line_num)
 {
 	int product;
 
-	if (!stack || !(*stack) || !((*stack)->next))
+	if (!stack || !*stack || !((*stack)->next))
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", line_num);
 		exit(EXIT_FAILURE);
+		return;
 	}
 
 	product = ((*stack)->next->n) * ((*stack)->n);

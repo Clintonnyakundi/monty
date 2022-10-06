@@ -70,6 +70,7 @@ globl global;
 stack_t *add_node(stack_t **stack, const int n);
 stack_t *queue_node(stack_t **stack, const int n);
 void free_stack(stack_t *stack);
+size_t print_stack(const stack_t *stack);
 
 void push(stack_t **stack, unsigned int line_num);
 void pall(stack_t **stack, unsigned int line_num);
@@ -92,6 +93,6 @@ void rotr(stack_t **stack, unsigned int line_num);
 void opcode(stack_t **stack, char *str, unsigned int line_num);
 
 int isnumber(char *str);
-
+int is_digit(char *string);
 
 #endif /*MONTY_H*/

@@ -8,9 +8,5 @@
  */
 void pall(stack_t **stack, __attribute__((unused)) unsigned int line_num)
 {
-	while (*stack)
-	{
-		printf("%d\n", (*stack)->n);
-		*stack = (*stack)->next;
-	}
+	print_stack(*stack);
 }

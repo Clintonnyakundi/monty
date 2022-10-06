@@ -5,7 +5,7 @@
  *@stack: head of stack
  *@line_num: line number
  *
- *Return: void 
+ *Return: void
  */
 void mod(stack_t **stack, unsigned int line_num)
 {
@@ -20,6 +20,7 @@ void mod(stack_t **stack, unsigned int line_num)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_num);
 		exit(EXIT_FAILURE);
+		return;
 	}
 
 	rem = ((*stack)->next->n) % ((*stack)->n);
