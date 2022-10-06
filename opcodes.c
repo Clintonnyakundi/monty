@@ -29,7 +29,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_num)
 		if (strcmp(op[i].opcode, str) == 0)
 		{
 			op[i].f(stack, line_num);
-			return; /* if we found a match, run the function */
+			return;
 		}
 		i++;
 	}
